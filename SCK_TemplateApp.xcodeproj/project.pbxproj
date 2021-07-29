@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,12 @@
 		E06E1AAA26B330E6002C209D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E06E1AA826B330E6002C209D /* Main.storyboard */; };
 		E06E1AAC26B330E8002C209D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E06E1AAB26B330E8002C209D /* Assets.xcassets */; };
 		E06E1AAF26B330E8002C209D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E06E1AAD26B330E8002C209D /* LaunchScreen.storyboard */; };
+		E06E1AB826B33260002C209D /* SwiftCoordinatorsKit in Frameworks */ = {isa = PBXBuildFile; productRef = E06E1AB726B33260002C209D /* SwiftCoordinatorsKit */; };
+		E06E1ABB26B332AF002C209D /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06E1ABA26B332AF002C209D /* ApplicationCoordinator.swift */; };
+		E06E1ABD26B33320002C209D /* CoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06E1ABC26B33320002C209D /* CoordinatorFactory.swift */; };
+		E06E1AC026B33537002C209D /* ControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06E1ABF26B33537002C209D /* ControllerFactory.swift */; };
+		E06E1AC226B33580002C209D /* InitilizationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06E1AC126B33580002C209D /* InitilizationController.swift */; };
+		E06E1AC426B33653002C209D /* InitializationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06E1AC326B33653002C209D /* InitializationCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +30,11 @@
 		E06E1AAB26B330E8002C209D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E06E1AAE26B330E8002C209D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E06E1AB026B330E8002C209D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E06E1ABA26B332AF002C209D /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
+		E06E1ABC26B33320002C209D /* CoordinatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorFactory.swift; sourceTree = "<group>"; };
+		E06E1ABF26B33537002C209D /* ControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerFactory.swift; sourceTree = "<group>"; };
+		E06E1AC126B33580002C209D /* InitilizationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitilizationController.swift; sourceTree = "<group>"; };
+		E06E1AC326B33653002C209D /* InitializationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitializationCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E06E1AB826B33260002C209D /* SwiftCoordinatorsKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +68,8 @@
 		E06E1AA126B330E6002C209D /* SCK_TemplateApp */ = {
 			isa = PBXGroup;
 			children = (
+				E06E1ABE26B33366002C209D /* Controllers */,
+				E06E1AB926B33266002C209D /* Coordinators */,
 				E06E1AA226B330E6002C209D /* AppDelegate.swift */,
 				E06E1AA426B330E6002C209D /* SceneDelegate.swift */,
 				E06E1AA626B330E6002C209D /* ViewController.swift */,
@@ -65,6 +79,25 @@
 				E06E1AB026B330E8002C209D /* Info.plist */,
 			);
 			path = SCK_TemplateApp;
+			sourceTree = "<group>";
+		};
+		E06E1AB926B33266002C209D /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				E06E1ABC26B33320002C209D /* CoordinatorFactory.swift */,
+				E06E1ABA26B332AF002C209D /* ApplicationCoordinator.swift */,
+				E06E1AC326B33653002C209D /* InitializationCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		E06E1ABE26B33366002C209D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E06E1ABF26B33537002C209D /* ControllerFactory.swift */,
+				E06E1AC126B33580002C209D /* InitilizationController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +116,9 @@
 			dependencies = (
 			);
 			name = SCK_TemplateApp;
+			packageProductDependencies = (
+				E06E1AB726B33260002C209D /* SwiftCoordinatorsKit */,
+			);
 			productName = SCK_TemplateApp;
 			productReference = E06E1A9F26B330E6002C209D /* SCK_TemplateApp.app */;
 			productType = "com.apple.product-type.application";
@@ -110,6 +146,9 @@
 				Base,
 			);
 			mainGroup = E06E1A9626B330E6002C209D;
+			packageReferences = (
+				E06E1AB626B33260002C209D /* XCRemoteSwiftPackageReference "SwiftCoordinatorsKit" */,
+			);
 			productRefGroup = E06E1AA026B330E6002C209D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,9 +176,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E06E1AC026B33537002C209D /* ControllerFactory.swift in Sources */,
 				E06E1AA726B330E6002C209D /* ViewController.swift in Sources */,
 				E06E1AA326B330E6002C209D /* AppDelegate.swift in Sources */,
 				E06E1AA526B330E6002C209D /* SceneDelegate.swift in Sources */,
+				E06E1ABB26B332AF002C209D /* ApplicationCoordinator.swift in Sources */,
+				E06E1AC226B33580002C209D /* InitilizationController.swift in Sources */,
+				E06E1AC426B33653002C209D /* InitializationCoordinator.swift in Sources */,
+				E06E1ABD26B33320002C209D /* CoordinatorFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +385,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E06E1AB626B33260002C209D /* XCRemoteSwiftPackageReference "SwiftCoordinatorsKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/DobbyWanKenoby/SwiftCoordinatorsKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.3.8;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E06E1AB726B33260002C209D /* SwiftCoordinatorsKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E06E1AB626B33260002C209D /* XCRemoteSwiftPackageReference "SwiftCoordinatorsKit" */;
+			productName = SwiftCoordinatorsKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E06E1A9726B330E6002C209D /* Project object */;
 }

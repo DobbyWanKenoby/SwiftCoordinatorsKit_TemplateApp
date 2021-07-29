@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "SwiftCoordinatorsKit",
+        "repositoryURL": "https://github.com/DobbyWanKenoby/SwiftCoordinatorsKit",
+        "state": {
+          "branch": null,
+          "revision": "2d3f78cee1f7a5a10e329d287ec6103bca105567",
+          "version": "0.3.8"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
